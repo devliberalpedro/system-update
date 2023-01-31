@@ -6,14 +6,14 @@
 set -o errexit
 
 ROOT_UID=0
-MAX_DELAY=20							                          # max delay to enter root password
-ARGS_COUNT=0                                        # to avoid more then one argument
+MAX_DELAY=20							# max delay to enter root password
+ARGS_COUNT=0                                        		# to avoid more then one argument
 tui_root_login=
 
-ALL_STATUS=true                                    # permorm all updates?
-DNF_STATUS=false                                    # permorm dnf upgrade?
-FLATPAK_STATUS=false                                # permorm flatpak update?
-FIRMWARE_STATUS=false                               # permorm firmware update?
+ALL_STATUS=true                                     		# perform all updates?
+DNF_STATUS=false                                    		# perform dnf upgrade?
+FLATPAK_STATUS=false                                		# perform flatpak update?
+FIRMWARE_STATUS=false                               		# perform firmware update?
 
 # Colors scheme
 CDEF=" \033[0m"                                 		# default color
