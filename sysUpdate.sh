@@ -160,7 +160,7 @@ done
 
 #############################
 #   :::::: M A I N ::::::   #
-#############################0
+#############################
 # Check for root access and proceed if it is present
 if [[ "$UID" -eq "$ROOT_UID" ]]; then
   install
@@ -172,7 +172,7 @@ else
   if [[ -n ${tui_root_login} ]] ; then
     install
   else
-    prompt -e "\n [ Error! ] -> Run me as root! "
+    prompt -i "\n [ NOTICE! ] -> Please, run me as root! "
     read -r -p " [ Trusted ] Specify the root password : " -t ${MAX_DELAY} -s
     if sudo -S echo <<< $REPLY 2> /dev/null && echo; then
       #Correct password, use with sudo's stdin
